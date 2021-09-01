@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+
+    <!-------------bootstrap link------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-------------css stylesheet------------------>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-center mt-5 text-white mb-5">Covid-19 Stats Update</h1>
+    </header>
+
+    <main>
+        <section class="container">
+            <!------search area------------>
+            <div class="input-group mb-3 mx-auto w-50">
+                <input id="search-field" type="text" class="form-control" placeholder="Search here by a country name">
+                <button onclick="searchData()" class="btn btn-outline-dark" type="button">Button</button>
+            </div>
+
+            <!---------spinner------------->
+            <div class="text-center mt-5">
+                <div id="spinner" class="spinner-border text-danger d-none" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <!-------details data----------->
+            <div id="details">
+            </div>
+
+        </section>
+    </main>
+
+    <footer></footer>
+
+
+    <!---------------script js---------------->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
