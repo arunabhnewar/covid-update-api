@@ -38,7 +38,7 @@ const displayData = covidArray => {
     if (covidArray.message === 'Not Found') {
         errorMsg.innerHTML = `
             <div class="d-flex justify-content-center">
-                <p class="error-text">⚠️ Not result found ⚠️</p>
+                <p class="error-text">⚠️ Your country name is not valid ⚠️</p>
             </div>`
         details.innerHTML = "";
         details.appendChild(errorMsg);
