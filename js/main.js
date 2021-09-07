@@ -1,11 +1,20 @@
 const details = document.getElementById('details');
 const errorMsg = document.createElement('div');
 // const notFoundMsg = document.createElement(div);
-const spinner = document.getElementById('spinner');
 
 const searchData = () => {
     const searchField = document.getElementById('search-field');
     const searchInText = searchField.value;
+
+    // spinner
+    details.innerHTML = `
+    <div class="text-center mt-5">
+        <div id="spinner" class="spinner-border text-danger d-none" role="status">
+        <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    `
+
     // empty search field
     if (searchInText == '') {
         errorMsg.innerHTML = `
@@ -20,16 +29,10 @@ const searchData = () => {
         searchField.value = '';
         // api
         const url = `https://api.covid19api.com/total/country/${searchInText}`
-        spinner.classList.remove('d-none');
+
         fetch(url)
             .then(res => res.json())
-            .then(data => {
-                // setting a timer of 1s,before removing the spinner, and showing data
-                setTimeout(() => {
-                    spinner.classList.add('d-none');
-                    displayData(data);
-                }, 1000);
-            })
+            .then(data => displayData(data))
     }
 }
 
