@@ -9,7 +9,7 @@ const searchData = () => {
     // spinner
     details.innerHTML = `
     <div class="text-center mt-5">
-        <div id="spinner" class="spinner-border text-danger d-none" role="status">
+        <div id="spinner" class="spinner-border text-danger" role="status">
         <span class="visually-hidden">Loading...</span>
         </div>
     </div>
